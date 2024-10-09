@@ -42,9 +42,14 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
     // Roomライブラリの追加（バージョンを直接指定）
-    implementation("androidx.room:room-runtime:2.5.1")
-    annotationProcessor("androidx.room:room-compiler:2.5.1")
+//    implementation("androidx.room:room-runtime:2.5.1")
+//    annotationProcessor("androidx.room:room-compiler:2.5.1")
 
     // Optional - RxJavaやLiveDataを使う場合
 //    implementation("androidx.room:room-rxjava2:2.5.1")
